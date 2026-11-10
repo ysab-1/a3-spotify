@@ -8,7 +8,7 @@ import { Popularity } from 'src/app/data/popularity';
     standalone: false
 })
 export class ThermometerComponent implements OnInit {
-  @Input() popularity: number;
+  @Input() popularity: Popularity;
 
   constructor() { }
 
