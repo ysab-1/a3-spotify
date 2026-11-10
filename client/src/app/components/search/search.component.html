@@ -1,5 +1,5 @@
 <h1>Search Spotify</h1>
-<input type="text" class="form-control mb-2" [(ngModel)]="searchString" (keyup.enter)="search()" placeholder="Search..."">
+<input type="text" class="form-control mb-2" [(ngModel)]="searchString" (keyup.enter)="search()" placeholder="Search...">
 <select class="form-select mb-2" [(ngModel)]="searchCategory">
 	<option *ngFor="let cat of searchCategories" [value]="cat">{{ cat }}</option>
 </select>
