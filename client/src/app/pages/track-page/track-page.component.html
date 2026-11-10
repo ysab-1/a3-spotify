@@ -5,7 +5,6 @@
 			<p>
 				Track on <a [routerLink]="track.album.url">{{ track.album.name }}</a>
             </p>
-			</p>
 			<div>
 				@for (artist of track.artists; track artist.name) {
 					<p>
