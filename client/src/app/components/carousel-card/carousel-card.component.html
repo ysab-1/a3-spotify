@@ -1,6 +1,8 @@
-<a [routerLink]="resource.url">
-	<img [src]="resource.imageURL" class="d-block w-100" [alt]="resource.name">
-	<div class="carousel-caption d-none d-md-block">
-		<h5>{{ resource.name }}</h5>
-	</div>
-</a>
+@if (resource) {
+	<a [routerLink]="resource.url" class="card text-decoration-none">
+	  <img [src]="resource.imageURL" class="card-img-top" [alt]="resource.name">
+	  <div class="card-body">
+		<h5 class="card-title text-dark">{{ resource.name }}</h5>
+	  </div>
+	</a>
+}

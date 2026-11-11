@@ -18,18 +18,17 @@
 				<tr>
 					<td>{{ i + 1 }}</td>
 					<td>
-						<a [routerLink]="track.url">{{ track.name }}</a>
+						<a [routerLink]="track?.url">{{ track?.name }}</a>
 					</td>
-					<td>{{ track.duration }}</td>
+					<td>{{ track?.duration }}</td>
 					@if (!hideArtist) {
 						<td>
-							<a [routerLink]="track.primaryArtist.url">{{ track.primaryArtist.name }}</a>
+							<a [routerLink]="track?.primaryArtist?.url">{{ track?.primaryArtist?.name }}</a>
 						</td>
 					}
-					<!--TODO: Use @if to hide if hideAlbum is true; link to the album's endpoint and display the album's name-->
 					@if (!hideAlbum) {
 						<td>
-                            <a [routerLink]="track.album.url">{{ track.album.name }}</a>
+                            <a [routerLink]="track?.album?.url">{{ track?.album?.name }}</a>
                         </td>
 					}
 				</tr>

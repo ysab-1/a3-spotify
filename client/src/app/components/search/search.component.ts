@@ -9,7 +9,6 @@ import { ResourceData } from '../../data/resource-data';
     selector: 'app-search',
     templateUrl: './search.component.html',
     styleUrls: ['./search.component.css'],
-    providers: [SpotifyService],
     standalone: false
 })
 export class SearchComponent implements OnInit {
