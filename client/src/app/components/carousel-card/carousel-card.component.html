@@ -1,8 +1,8 @@
 @if (resource) {
-	<a [routerLink]="resource.url" class="card text-decoration-none">
-	  <img [src]="resource.imageURL" class="card-img-top" [alt]="resource.name">
+	<a [routerLink]="getLocalUrl()" class="card text-decoration-none">
+	  <img [src]="resource?.imageURL" class="card-img-top" [alt]="resource?.name">
 	  <div class="card-body">
-		<h5 class="card-title text-light">{{ resource.name }}</h5>
+		<h5 class="card-title text-light">{{ resource?.name }}</h5>
 	  </div>
 	</a>
 }

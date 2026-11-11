@@ -15,4 +15,9 @@ export class CarouselCardComponent implements OnInit {
   ngOnInit() {
   }
 
+  getLocalUrl(): string {
+    if (!this.resource?.url) return '';
+    return this.resource.url.replace('https://open.spotify.com', '');
+  }
+
 }
