@@ -1,22 +1,22 @@
 <div class="row">
 	@if(track) {
 		<div class="col-sm-6 col-12">
-			<h1>{{ track.name }}</h1>
+			<h1>{{ track?.name }}</h1>
 			<p>
-				Track on <a [routerLink]="track.album.url">{{ track.album.name }}</a>
+				Track on <a [routerLink]="getLocalUrl(track?.album?.url)">{{ track?.album?.name }}</a>
             </p>
 			<div>
-				@for (artist of track.artists; track artist.name) {
+				@for (artist of track?.artists; track artist?.name) {
 					<p>
-						Artist: <a [routerLink]="artist.url">{{ artist.name }}</a>
+						Artist: <a [routerLink]="getLocalUrl(artist?.url)">{{ artist?.name }}</a>
 					</p>
 				}
 			</div>
 			<p>
-				Duration: {{ track.duration }}
+				Duration: {{ track?.duration || formatDuration(track?.duration_ms) }}
 			</p>
 			<p>
-				<a [href]="track.spotifyUrl" class="btn btn-light" role="button" target="_blank">Open {{ track.name }} on Spotify</a>
+				<a [href]="track.spotifyUrl" class="btn btn-light" role="button" target="_blank">Open {{ track?.name }} on Spotify</a>
 			</p>
 		</div>
 		<div class="col-sm-6 col-12">

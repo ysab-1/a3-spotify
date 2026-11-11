@@ -29,4 +29,16 @@ export class TrackPageComponent implements OnInit {
     }
   }
 
+  formatDuration(ms: number): string {
+    if (!ms) return '0:00';
+    const minutes = Math.floor(ms / 60000);
+    const seconds = Math.floor((ms % 60000) / 1000);
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  }
+
+  getLocalUrl(url: string): string {
+    if (!url) return '';
+    return url.replace('https://open.spotify.com', '');
+  }
+
 }

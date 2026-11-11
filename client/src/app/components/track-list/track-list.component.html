@@ -18,7 +18,7 @@
 				<tr>
 					<td>{{ i + 1 }}</td>
 					<td>
-						<a [routerLink]="track?.url">{{ track?.name }}</a>
+						<a [routerLink]="getLocalUrl(track?.url)">{{ track?.name }}</a>
 					</td>
 					<td>{{ track?.duration || formatDuration(track?.duration_ms) }}</td>
 					@if (!hideArtist) {
