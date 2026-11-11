@@ -1,5 +1,5 @@
 <div class="progress">
-	<div class="progress-bar" role="progressbar" [style.width]="popularity.percent + '%'" [style.background-color]="popularity.color">
-	  <span class="progress-bar-text">Popularity: {{ popularity.percent }}%</span>
+	<div class="progress-bar" role="progressbar" [style.width]="(popularity.percent * 100) + '%'" [style.background-color]="popularity.color">
+	  <span class="progress-bar-text">Popularity: {{ (popularity.percent * 100) | number:'1.0-0' }}%</span>
 	</div>
   </div>

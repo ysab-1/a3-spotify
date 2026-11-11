@@ -9,7 +9,7 @@
 		</div>
 		<div class="col-xl-4 col-12">
 			<h3>Popularity</h3>
-			<p>?{{ artist.followers | number }} followers</p>
+			<p>{{ artist.followers | number }} followers</p>
 			<app-thermometer [popularity]="artist.popularity"></app-thermometer>
 			<h3>{{ artist.name }}'s Albums</h3>
 			<app-carousel [resources]="albums" [carouselId]="'artistAlbumsCarousel'"></app-carousel>
