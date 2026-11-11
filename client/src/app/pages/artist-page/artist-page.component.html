@@ -4,7 +4,7 @@
 			<h1>{{ artist.name }}</h1>
 			<img id="artistImg" [src]="artist.imageURL" class="img-fluid rounded mb-3" [alt]="artist.name">
 			<p>
-				<a [href]="artist.spotifyUrl" class="btn btn-light" role="button" target="_blank">Open {{ artist.name }} on Spotify</a>
+				<a [href]="artist?.url" class="btn btn-light" role="button" target="_blank">Open {{ artist?.name }} on Spotify</a>
 			</p>
 		</div>
 		<div class="col-xl-4 col-12">
