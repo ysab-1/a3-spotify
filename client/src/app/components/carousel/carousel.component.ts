@@ -15,9 +15,4 @@ export class CarouselComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  get carouselIdForBinding():string {
-    return '#' + this.carouselId;
-  }
-
 }
