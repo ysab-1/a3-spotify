@@ -16,7 +16,7 @@
 				Duration: {{ track?.duration || formatDuration(track?.duration_ms) }}
 			</p>
 			<p>
-				<a [href]="track.spotifyUrl" class="btn btn-light" role="button" target="_blank">Open {{ track?.name }} on Spotify</a>
+				<a [href]="track?.url" class="btn btn-light" role="button" target="_blank">Open {{ track?.name }} on Spotify</a>
 			</p>
 		</div>
 		<div class="col-sm-6 col-12">

@@ -6,11 +6,11 @@
 			<app-thermometer [popularity]="album.popularity"></app-thermometer>
             @for (artist of album.artists; track artist.name) {
                 <p>
-                    Artist: <a [routerLink]="artist.url">{{ artist.name }}</a>
+                    Artist: <a [routerLink]="getLocalUrl(artist?.url)">{{ artist.name }}</a>
                 </p>
             }
             <p>
-				<a [href]="album.spotifyUrl" class="btn btn-light" role="button" target="_blank">Open {{ album.name }} on Spotify</a>
+				<a [href]="album?.url" class="btn btn-light" role="button" target="_blank">Open {{ album.name }} on Spotify</a>
 			</p>
 		</div>
 		<div class="col-12 col-sm-6">
