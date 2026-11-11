@@ -20,7 +20,7 @@
 					<td>
 						<a [routerLink]="track?.url">{{ track?.name }}</a>
 					</td>
-					<td>{{ track?.duration }}</td>
+					<td>{{ track?.duration || formatDuration(track?.duration_ms) }}</td>
 					@if (!hideArtist) {
 						<td>
 							<a [routerLink]="track?.primaryArtist?.url">{{ track?.primaryArtist?.name }}</a>
